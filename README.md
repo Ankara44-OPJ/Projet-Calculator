@@ -8,17 +8,25 @@ Un projet evolutif de calculatrice simple en python permettant de faire des calc
 
 
 == HISTORIQUE DES VERSIONS ==
-V 1.0.0 Debut du projet Calculator 11/09/2026 11:58
+V 1.0.0 Debut du projet Calculator 14/09/2026 11:58
     . presentation du projet
     . entree des nombres
     . differentes operations
     . choix de l'operation
 
-V 1.0.1 Correction d'erreur 1 (gestion d'erreur, division par 0) 11/09/2026 12:13
+V 1.0.1 Correction d'erreur 1 (gestion d'erreur, division par 0) 14/09/2026 12:13
     . gestion d'erreur au niveau de l'entree des nombres try/except
     . gestion de l'erreur division par 0
 
-V 1.1.0 Ajout de la boucle principale 11/09/2026 12:32
+V 1.1.0 Ajout de la boucle principale 14/09/2026 12:32
+V 1.2.0 Ajout des fonctions de clacul 14/09/2026 13:40
+V 1.2.1 Correction d'erreur 2 (integration du float) 14/09/2026 13:45
+V 1.2.2 Ajout de nouvelles fonctions de calcul (modulo, puissance), quelques correctifs 14/09/2026 13:58
+V 1.2.3 Organisation du code 14/09/2026 14:10
+    . fonction afficher_menu
+    . fonction demander_nombre
+V 1.2.4 Ajout de la fonction de calcul racine carree 14/09/2026 14:14
+V 1.3.0 Ajout d'un historique des calculs 14/09/2026 14:54
 
 
 
