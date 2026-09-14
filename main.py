@@ -1,48 +1,60 @@
 
+#boucle principale
+while True: 
+    #Presentation du projet
+    print("==== PROJET CALCULATRICE====")
+    print("Ce projet est un projet de calculatrice permettant de faire des calculs simples et évolutifs")
+    print("1. Addition")
+    print("2. Soustraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Quitter")
 
-#Presentation du projet
-print("==== PROJET CALCULATRICE====")
-print("Ce projet est un projet de calculatrice permettant de faire des calculs simples et évolutifs")
-print("1. Addition")
-print("2. Soustraction")
-print("3. Multiplication")
-print("4. Division")
+    #Demande du choix de l'utilisateur
+    choix=int(input("Entrer votre choix:"))
+    if choix==5:
+        print("Merci d'avoir utilisé la calculatrice!")
+        break
 
-#Entrée des nombres
-try:
-    nombre1=int(input("Entrer le premier nombre:"))
-    nombre2=int(input("Entrer le deuxième nombre:"))
-    print("nombre1:",nombre1)
-    print("nombre2:",nombre2)
-except ValueError:
-    print("Veuillez entrer des nombres valides.")
+    #Entrée des nombres
+    try:
+        nombre1=int(input("Entrer le premier nombre:"))
+        nombre2=int(input("Entrer le deuxième nombre:"))
+        print("nombre1:",nombre1)
+        print("nombre2:",nombre2)
 
-#Différentes opérations
-addition=nombre1+nombre2
-soustraction=nombre1-nombre2
-multiplication=nombre1*nombre2
-division=nombre1/nombre2    
+    #Différentes opérations
+        addition=nombre1+nombre2
+        soustraction=nombre1-nombre2
+        multiplication=nombre1*nombre2
+        division=nombre1/nombre2  
 
-#Choix de l'opération
-choix=int(input("Entrer votre choix:"))
-if choix==1:
-    print("Vous avez choisi l'addition")
-    print("Résultat:", addition)
-elif choix==2:
-    print("Vous avez choisi la soustraction")
-    print("Résultat:", soustraction)
-elif choix==3:
-    print("Vous avez choisi la multiplication")
-    print("Résultat:", multiplication)  
-elif choix==4:
-    if nombre2==0:
-        print("Erreur: Division par zéro n'est pas permise.")
-    else:
-        print("Vous avez choisi la division")
-        print("Résultat:", division)
-else:
-    print("Choix invalide") 
+    #Choix de l'opération
+        
+        if choix==1:
+            print("Vous avez choisi l'addition")
+            print("Résultat:", addition)
+        elif choix==2:
+            print("Vous avez choisi la soustraction")
+            print("Résultat:", soustraction)
+        elif choix==3:
+            print("Vous avez choisi la multiplication")
+            print("Résultat:", multiplication)  
+        elif choix==4:
+            if nombre2==0:
+                print("Erreur: Division par zéro n'est pas permise.")
+            else:
+                print("Vous avez choisi la division")
+                print("Résultat:", division)
+        else:
+            print("Choix invalide") 
+          
+    except ValueError:
+        print("Veuillez entrer des nombres valides.")
 
+    
+
+   
 
 
 
