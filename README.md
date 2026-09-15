@@ -27,6 +27,16 @@ V 1.2.3 Organisation du code 14/09/2026 14:10
     . fonction demander_nombre
 V 1.2.4 Ajout de la fonction de calcul racine carree 14/09/2026 14:14
 V 1.3.0 Ajout d'un historique des calculs 14/09/2026 14:54
+V 1.3.1 Ajout du dernier resultat 14/09/2026 22:49
+V 1.4.0 Ajout de nouvelles fonctions de calculs 15/09/2026 10:43
+    .factorielle
+    .cosinus
+    .sinus
+    .tangente
+    .logarithme
+    .logarithme neperien
+    .exponentiel
+
 
 
 
