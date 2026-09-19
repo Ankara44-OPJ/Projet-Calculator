@@ -36,6 +36,14 @@ V 1.4.0 Ajout de nouvelles fonctions de calculs 15/09/2026 10:43
     .logarithme
     .logarithme neperien
     .exponentiel
+V 1.4.1 Organisation du code 15/09/2026 11:27
+V 1.5.0 Sauvegarde de donnees et organisation du code 19/09/2026 21:40
+    .fichier de sauvegarde json
+    .fichier operations
+    .reorganisation des fonctions
+    .ajouter de ANS
+    .creation de la fonction lancer_calculatrice()
+
 
 
 
