@@ -43,6 +43,7 @@ V 1.5.0 Sauvegarde de donnees et organisation du code 19/09/2026 21:40
     .reorganisation des fonctions
     .ajouter de ANS
     .creation de la fonction lancer_calculatrice()
+V 2.0.0 Mise en place d'une interface console 21/09/2026 14:39
 
 
 
