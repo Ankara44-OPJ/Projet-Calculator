@@ -4,5 +4,47 @@
         "operation": "-",
         "nombre2": 87.0,
         "resultat": -11.0
+    },
+    {
+        "nombre1": 76.0,
+        "operation": "*",
+        "nombre2": 65.0,
+        "resultat": 4940.0
+    },
+    {
+        "nombre1": 65.0,
+        "operation": "*",
+        "nombre2": 76.0,
+        "resultat": 4940.0
+    },
+    {
+        "nombre1": 87.0,
+        "operation": "√",
+        "nombre2": null,
+        "resultat": 9.327379053088816
+    },
+    {
+        "nombre1": 87.0,
+        "operation": "**",
+        "nombre2": 66.0,
+        "resultat": 1.0192264201762234e+128
+    },
+    {
+        "nombre1": 76.0,
+        "operation": "%",
+        "nombre2": 76.0,
+        "resultat": 0.0
+    },
+    {
+        "nombre1": 10.0,
+        "operation": "log",
+        "nombre2": null,
+        "resultat": 1.0
+    },
+    {
+        "nombre1": -3.0,
+        "operation": "+",
+        "nombre2": -2.0,
+        "resultat": -5.0
     }
 ]

@@ -3,18 +3,15 @@
 
 import operations
 import historique
+import interface
 
-def afficher_resultat(resultat):
-    if isinstance(resultat, float) and (resultat.is_integer()):
-        resultat = int(resultat)
-    print("\n" + "="*40)
-    print("Résultat:", resultat)
-    print("="*40 + "\n")
+
+
 
 def faire_un_choix():
     while True:
         try:
-            choix = int(input("Entrez votre choix: "))
+            choix = int(input("Entrez votre choix: ").strip())
             return choix
         except ValueError:
             print("\n")
@@ -22,72 +19,11 @@ def faire_un_choix():
             print("║Veuillez entrer un nombre valide.     ║")
             print("╚" + "="*38 + "╝")
 
+
+
 def lancer_calculatrice():
     #fonctions de menu
-    def afficher_menu():
-        print("\n")
-
-    #Presentation du projet
-        print("╔" + "="*38 + "╗")
-        print("║    ==== PROJET CALCULATRICE====      ║")
-        print("╚" + "="*38 + "╝")
-        print("\n")
-        print("="*40)
-        print("Ce projet est un projet de calculatrice \npermettant de faire des calculs simples \net évolutifs")
-        print("="*40 + "\n")
-
-        if dernier_resultat is None:
-            print("╔" + "="*38 )
-            print("║ Aucun dernier résultat disponible.   ")
-            print("╚" + "="*38 )
-        else:
-            print("╔" + "="*38 )
-            print("║ Dernier résultat:", dernier_resultat)
-            print("╚" + "="*38 )
-            print("\n")
-
-        print("╔" + "="*38 + "╗")
-        print("║  === Operations a deux nombres: ===  ║")
-        print("╚" + "="*38 + "╝")
-        print("╔" + "="*38 + "╗")
-        print("║1. Addition                           ║")
-        print("║2. Soustraction                       ║")
-        print("║3. Multiplication                     ║")
-        print("║4. Division                           ║")
-        print("║5. Modulo                             ║")
-        print("║6. Puissance                          ║")
-        print("╚" + "="*38 + "╝")
-        print("\n")
-
-        print("╔" + "="*38 + "╗")
-        print("║    === Operations a un nombre: ===   ║")
-        print("╚" + "="*38 + "╝")
-        print("╔" + "="*38 + "╗")
-        print("║7. Racine carrée                      ║")
-        print("║8. valeur absolue                     ║")
-        print("║9. Pourcentage                        ║")
-        print("║10. Augmentation                      ║")
-        print("║11. Reduction                         ║")
-        print("║12. factorielle                       ║")
-        print("║13.cosinus                            ║")
-        print("║14. sinus                             ║")
-        print("║15. tangente                          ║")
-        print("║16. logarithme                        ║")
-        print("║17. logarithme népérien               ║")
-        print("║18. exponentielle                     ║")
-        print("╚" + "="*38 + "╝")
-        print("\n")
-
-        print("╔" + "="*38 + "╗")
-        print("║        === Autres options: ===       ║")
-        print("╚" + "="*38 + "╝")
-        print("╔" + "="*38 + "╗")
-        print("║19. Historique des calculs            ║")
-        print("║20. Effacer l'historique des calculs  ║")
-        print("║21. Afficher le dernier résultat      ║")
-        print("║22. Quitter                           ║")
-        print("╚" + "="*38 + "╝")
-
+    
     def demander_nombre(prompt):
         while True:
                 valeur =(input(prompt)).strip()
@@ -107,8 +43,28 @@ def lancer_calculatrice():
     historique_data = historique.charger_historique()
     dernier_resultat = None
 
+    def afficher_dernier_resultat():
+        if dernier_resultat is None:
+            print("╔" + "="*38 )
+            print("║ Aucun dernier résultat disponible.   ")
+            print("╚" + "="*38 )
+        else:
+            print("╔" + "="*38 )
+            print("║ Dernier résultat:", dernier_resultat)
+            print("╚" + "="*38 )
+            print("\n")
 
-    operation_config ={
+    
+    
+
+    #boucle principale
+    while True: 
+        
+        interface.afficher_menu()
+        afficher_dernier_resultat()
+
+
+        operation_config ={
         1 : {
             "operation": operations.addition,
             "symbol": "+",
@@ -201,12 +157,6 @@ def lancer_calculatrice():
         }
 
     }
-    
-
-    #boucle principale
-    while True: 
-        
-        afficher_menu()
 
         #Demande du choix de l'utilisateur
         print("\n")
@@ -220,7 +170,7 @@ def lancer_calculatrice():
             nombre2=demander_nombre("Entrer le deuxième nombre:")
             resultat = operation_config[choix]["operation"](nombre1, nombre2)
             symbole = operation_config[choix]["symbol"]
-            afficher_resultat(resultat)
+            interface.afficher_resultat(resultat)
             historique.ajouter_historique(historique_data, nombre1, symbole, nombre2, resultat)
             historique.sauvegarder_historique(historique_data)
             dernier_resultat = resultat
@@ -230,7 +180,7 @@ def lancer_calculatrice():
             nombre=demander_nombre("Entrer le nombre:")
             resultat = operation_config[choix]["operation"](nombre)
             symbole = operation_config[choix]["symbol"]
-            afficher_resultat(resultat)
+            interface.afficher_resultat(resultat)
             if choix == 8:
                 print("\n")
                 print("╔" + "="*38)

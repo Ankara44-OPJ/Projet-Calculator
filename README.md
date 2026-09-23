@@ -44,6 +44,12 @@ V 1.5.0 Sauvegarde de donnees et organisation du code 19/09/2026 21:40
     .ajouter de ANS
     .creation de la fonction lancer_calculatrice()
 V 2.0.0 Mise en place d'une interface console 21/09/2026 14:39
+    .creation du fichier interface
+    .ajout de separateurs pour creer une interface
+V 2.1.0 Mise en place de tests automatiques 22/09/2026 00:01
+    .creation du dossier test
+    .creation du fichier test_operations
+    
 
 
 
