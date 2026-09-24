@@ -49,6 +49,8 @@ V 2.0.0 Mise en place d'une interface console 21/09/2026 14:39
 V 2.1.0 Mise en place de tests automatiques 22/09/2026 00:01
     .creation du dossier test
     .creation du fichier test_operations
+V 2.2.0 Fonctionalite de calcul des expressions 24/09/2026 16:00
+    .creation du dossier expression
     
 
 
