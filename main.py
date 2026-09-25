@@ -55,21 +55,15 @@ def lancer_calculatrice():
             print("╚" + "="*38 )
             print("\n")
 
-    def calculer_expression(dernier_resultat):
+    def calculer_expression(dernier_resultat, historique_data):
         expression_utilisateur= input("Entrez une expression:").strip()
-        if expression_utilisateur.upper()== "ANS":
-            if dernier_resultat is None:
-                print("Aucun dernier resultat disponible")
-                return None
-            return dernier_resultat
-            resultat_expression = dernier_resultat  
-        else:
-            try:
-                resultat_expression = Expression.evaluer_expression(expression_utilisateur)
-                dernier_resultat=resultat_expression
-            except ValueError as erreur:
-                print(f"Erreur: {erreur}")
-                return None
+        
+        try:
+            resultat_expression = Expression.evaluer_expression(expression_utilisateur, dernier_resultat)
+            #dernier_resultat=resultat_expression
+        except ValueError as erreur:
+            print(f"Erreur: {erreur}")
+            return None
         
         interface.afficher_resultat(resultat_expression)
         historique.ajouter_historique(

@@ -55,6 +55,8 @@ V 2.2.1 Mise en place des calculs d'expressions 25/09/2026 00:25
     .entrer de l'expression
     .traitement
     .sauvegarde
+V 2.2.2 Tententive d'implementation de ANS dans expression 25/09/2026 18:18
+    .erreur
     
     
 

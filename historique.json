@@ -154,5 +154,35 @@
         "operation": "=",
         "nombre2": null,
         "resultat": 30
+    },
+    {
+        "nombre1": "2-4",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": -2
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "23",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 23
+    },
+    {
+        "nombre1": "22",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 22
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
     }
 ]
