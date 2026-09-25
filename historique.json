@@ -46,5 +46,113 @@
         "operation": "+",
         "nombre2": -2.0,
         "resultat": -5.0
+    },
+    {
+        "nombre1": 76.0,
+        "operation": "tan",
+        "nombre2": null,
+        "resultat": 4.0107809335358455
+    },
+    {
+        "nombre1": "(4+2)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(4+2)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(4+2)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(4+2)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(4+2)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(4+2)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
+    },
+    {
+        "nombre1": "(2+4)x5",
+        "operation": "=",
+        "nombre2": null,
+        "resultat": 30
     }
 ]

@@ -36,6 +36,19 @@ def evaluer_noeud(noeud):
         return OPERATEURS[operateur](valeur)
     raise ValueError("expression non autorisee")
 
+    if isinstance(noeud, ast.Name):
+        if noeud.id == "ANS":
+            if dernier_resultat is None:
+                raise ValueError("Aucun resultat disponible")
+            return dernier_resultat
+
+        raise ValueError(
+            f"variable inconnue: {noeud.id}"
+        )
+
+
+
+
 def evaluer_expression(expression):
     expression = expression.strip()
 
@@ -82,33 +95,4 @@ print(evaluer_expression("(2+4)x5"))
 
 
 
-
-expression = input("expression:")
-def calculer_expression(expression):
-    expression = expression.replace(" ", "")
-    print(f"expression recue: {expression}")
-
-operateurs = "+-*/"
-def est_operateur(caractere):
-    return caractere in operateurs
-
-
-def tokeniser(expression):
-    tokens = []
-    nombre= ""
-
-    for caractere in expression:
-        if caractere.isdigit() or caractere == ".":
-            nombre+=caractere
-        elif est_operateur(caractere):
-            if nombre:
-                tokens.append(nombre)
-                nombre=""
-            tokens.append(caractere)
-
-    if nombre:
-        tokens.append(nombre)
-    return tokens
-
-print(tokeniser(expression))
 

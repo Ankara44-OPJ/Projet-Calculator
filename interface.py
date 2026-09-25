@@ -63,7 +63,8 @@ def afficher_menu():
         print("║19. Historique des calculs            ║")
         print("║20. Effacer l'historique des calculs  ║")
         print("║21. Afficher le dernier résultat      ║")
-        print("║22. Quitter                           ║")
+        print("║22. Expression                        ║")
+        print("║23. Quitter                           ║")
         print("╚" + "="*38 + "╝")
 
 

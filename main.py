@@ -4,6 +4,7 @@
 import operations
 import historique
 import interface
+import Expression
 
 
 
@@ -54,7 +55,35 @@ def lancer_calculatrice():
             print("╚" + "="*38 )
             print("\n")
 
-    
+    def calculer_expression(dernier_resultat):
+        expression_utilisateur= input("Entrez une expression:").strip()
+        if expression_utilisateur.upper()== "ANS":
+            if dernier_resultat is None:
+                print("Aucun dernier resultat disponible")
+                return None
+            return dernier_resultat
+            resultat_expression = dernier_resultat  
+        else:
+            try:
+                resultat_expression = Expression.evaluer_expression(expression_utilisateur)
+                dernier_resultat=resultat_expression
+            except ValueError as erreur:
+                print(f"Erreur: {erreur}")
+                return None
+        
+        interface.afficher_resultat(resultat_expression)
+        historique.ajouter_historique(
+            historique_data,
+            expression_utilisateur,
+            "=",
+            None,
+            resultat_expression
+             )
+        historique.sauvegarder_historique(historique_data)
+
+        return resultat_expression
+
+ 
     
 
     #boucle principale
@@ -201,6 +230,7 @@ def lancer_calculatrice():
             taux=demander_nombre("Entrer le taux:")
             resultat = operation_config[choix]["operation"](nombre, taux)
             symbole = operation_config[choix]["symbol"]
+            dernier_resultat=resultat
             if choix == 9:
                 print("\n")
                 print("╔" + "="*38)
@@ -243,8 +273,15 @@ def lancer_calculatrice():
                 print("║Résultat:", resultat)
                 print("╚" + "="*38 + "╝")
                 continue
-        
+
         if choix==22:
+            resultat_expression=calculer_expression(dernier_resultat)
+            dernier_resultat=resultat_expression
+            continue
+            
+            
+
+        if choix==23:
             print("\n")
             print("╔" + "="*38)
             print("║Merci d'avoir utilisé la calculatrice.\nAu revoir!")
@@ -252,22 +289,24 @@ def lancer_calculatrice():
             break
 
         #Entrée des nombres
-        try:
-            nombre1=demander_nombre("Entrer le premier nombre:")
-            nombre2=demander_nombre("Entrer le deuxième nombre:")
-            print("\n")
-            print("="*40)
-            print("nombre1:",nombre1)
-            print("="*40)
-            print("="*40)
-            print("nombre2:",nombre2)
-            print("="*40)
-            
-        except ValueError:
-            print("\n")
-            print("╔" + "="*38 + "╗")
-            print("║Veuillez entrer des nombres valides.  ║")
-            print("╚" + "="*38 + "╝")
+        if choix is not 22 :
+            try:
+                nombre1=demander_nombre("Entrer le premier nombre:")
+                nombre2=demander_nombre("Entrer le deuxième nombre:")
+                print("\n")
+                print("="*40)
+                print("nombre1:",nombre1)
+                print("="*40)
+                print("="*40)
+                print("nombre2:",nombre2)
+                print("="*40)
+                
+            except ValueError:
+                print("\n")
+                print("╔" + "="*38 + "╗")
+                print("║Veuillez entrer des nombres valides.  ║")
+                print("╚" + "="*38 + "╝")
+        continue
 
 if __name__ == "__main__":
     lancer_calculatrice()

@@ -24,6 +24,12 @@ def afficher_historique(historique):
                     calcul["nombre2"], "=",
                     calcul["resultat"]
                 )
+            if calcul["nombre1"] is not float:
+                print(
+                    calcul["nombre1"],
+                    "=",
+                    calcul["resultat"]
+                    ) 
             else:
                 print(
                     calcul["operation"],
